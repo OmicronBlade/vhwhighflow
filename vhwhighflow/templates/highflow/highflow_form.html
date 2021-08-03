@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+
+    <!-- Security token -->
+    {% csrf_token %}
+
+    <table class="w3-table">
+        <!-- Using the formset -->
+        {{ form.as_table }}
+    </table>
+    <input type="submit" class = "w3-button w3-small w3-grey" value="Submit">
+</form>
+{% endblock %}

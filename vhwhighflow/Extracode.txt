@@ -1,0 +1,10 @@
+    <p><strong>Name: </strong>{{ highflow.Name }}</p>
+    <p><strong>Folder No: </strong>{{ highflow.FolderNo }}</p>
+    <p><strong>Age: </strong>{{ highflow.Age }}</p>
+    <p><strong>Red Score: </strong>{{ highflow.RedScore }}</p>
+
+        <tr>
+            <td>Name:</td><td>{{ highflow.Name }}</td>
+        </tr>
+
+    <link rel="stylesheet" href="{% static 'css/highflow.css' %}">
