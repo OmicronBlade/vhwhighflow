@@ -2,12 +2,13 @@
 
 {% block content %}
 <div style="overflow-x:auto;">
-    <table style="max-width:100%; white-space:nowrap;" class="w3-table">
+    <table style="white-space:nowrap;" class="w3-table">
         <thead class="links">
             <tr class="w3-border-bottom">
                 <td>Name</td>
                 <td>Age</td>
-                <td>Score</td>
+                <td>Priority</td>
+                <td>Days HFNO2</td>
                 <td>Sats</td>
                 <td></td>
             </tr>
@@ -18,9 +19,10 @@
         <tr class="w3-hover-grey">
             <td>{{ object.Name }}</td>
             <td>{{ object.Age }}</td>
-            <td>{{ object.RedScore }}</td>
+            <td>{{ object.PriorityScore }}</td>
+            <td>{{ object.get_days_hfno2 }}</td>
             <td>{{ object.get_latest_sats.0.Sats }}</td>
-            <td><a class="w3-button w3-small w3-blue" href="/list/{{ object.pk }}/">View <i class="w3-small fa fa-arrow-right"></i></a></td>
+            <td><a class="w3-button w3-blue" href="/list/{{ object.pk }}/">View <i class="w3-small fa fa-arrow-right"></i></a></td>
         </tr>
         <!-- If object_list is empty  -->
         {% empty %}
@@ -30,6 +32,6 @@
         {% endfor %}
 
     </table>
-    <a class="w3-button w3-small w3-grey w3-left" href="/create/">Add Patient</a>
+    <a class="w3-button w3-grey w3-left" href="/create/">Add Patient</a>
 </div>
 {% endblock %}

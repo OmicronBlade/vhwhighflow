@@ -3,12 +3,13 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.urls import reverse
 from .models import *
-from .forms import highflowForm, satsForm
+from .forms import highflowFormCreate, highflowFormUpdate, satsForm
 
 class highflowCreate(CreateView):
     model = highflow
-    fields = ['FolderNo','Name','Age','RedScore']
-    #form_class = highflowForm
+    #fields = ['FolderNo','Name','Age','Background','PriorityScore',
+    #          'PriorityScoreDate','HFStart']
+    form_class = highflowFormCreate
     success_url = '/'
 
 class highflowInidividual(DetailView):
@@ -16,12 +17,15 @@ class highflowInidividual(DetailView):
 
 class highflowList (ListView):
     model = highflow
-    fields = ['Name','Age','RedScore']
+    fields = ['Name','Age','PriorityScore','UpdatedPriority','HFStart']
     queryset = highflow.objects.filter(Archive=False)
+    ordering = ['HFStart']
 
 class highflowUpdateView(UpdateView):
     model = highflow
-    fields = ['FolderNo','Name','Age','RedScore','Archive']
+    #fields = ['FolderNo','Name','Age','Background','PriorityScore',
+    #          'PriorityScoreDate','UpdatedPriority','UpdatedPriorityDate','HFStart','Archive']
+    form_class = highflowFormUpdate
 
     def get_success_url(self):
         return reverse('list', kwargs={'pk': self.object.pk})
@@ -40,7 +44,7 @@ class satsCreate(CreateView):
 
 class satsUpdateView(UpdateView):
     model = sats
-    fields = ['Date','Sats']
-    success_url = '/'
+    fields = ['Date', 'RespRate','HeartRate','Sats','FiO2','Litres']
 
-
+    def get_success_url(self):
+        return reverse('list', kwargs={'pk': self.object.Patient_id})

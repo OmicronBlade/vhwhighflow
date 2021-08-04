@@ -1,0 +1,19 @@
+HFNO2 Focus (Done)
+    Models
+    Background
+    Priority Score
+    Day started HFNO2
+    Daily Sats, FiO2, l/min, RR, Pulse
+
+DatePicker (Done)
+DateTimePicker
+
+Labels (Done)
+Menu (Done)
+Dashboard
+CSS (Mobile and Web) (Partly)
+Archive Function (Button and Command Code)
+
+Red 2 Old Function
+Login system
+Logo

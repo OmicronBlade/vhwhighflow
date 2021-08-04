@@ -3,28 +3,28 @@
 {% block content %}
 <h1>Patient: {{ highflow.Name }}</h1>
 <div style="overflow-x:auto;">
-    <table style="max-width:100%; white-space:nowrap;" class="w3-table">
-        <tr>
-            <td>Folder No:</td><td>{{ highflow.FolderNo }}</td>
-        </tr>
-        <tr>
-            <td>Age:</td><td>{{ highflow.Age }}</td>
-        </tr>
-        <tr>
-            <td>Red Score:</td><td>{{ highflow.RedScore }}</td>
-        </tr>
-
+    <table style="white-space:nowrap;" class="table">
+        <tr><td>Folder No:</td><td>{{ highflow.FolderNo }}</td></tr>
+        <tr><td>Age:</td><td>{{ highflow.Age }}</td></tr>
+        <tr><td>Priority:</td><td>{{ highflow.PriorityScore }}</td><td>Date:</td><td>{{ highflow.PriorityScoreDate }}</td></tr>
+        <tr><td>Updated Priority:</td><td>{{ highflow.UpdatedPriority }}</td><td>Date:</td><td>{{ highflow.UpdatedPriorityDate }}</td></tr>
+        <tr><td>High Flow Start:</td><td>{{ highflow.HFStart }}</td></tr>
+        <tr><td>Background:</td><td colspan="3">{{ highflow.Background|wordwrap:50|linebreaks }}</td></tr>
     </table>
 
-    <a class="w3-button w3-small w3-blue" href="/update/{{ highflow.pk }}/">Update Details<i class="w3-small fa fa-arrow-right"></i></a>
+    <a class="w3-button w3-blue" href="/update/{{ highflow.pk }}/">Update Details <i class="w3-small fa fa-arrow-right"></i></a>
     <br>
     <br>
 
-    <table class="w3-table">
+    <table class="table">
         <thead class="links">
             <tr class="w3-border-bottom">
                 <td>Date</td>
+                <td>Resp Rate</td>
+                <td>Heart Rate</td>
                 <td>Sats</td>
+                <td>FiO2</td>
+                <td>Litres</td>
                 <th></th>
             </tr>
         </thead>
@@ -32,8 +32,12 @@
             <!-- Display Objects -->
             <tr class="w3-hover-grey">
                 <td>{{ object.Date }}</td>
+                <td>{{ object.RespRate }}</td>
+                <td>{{ object.HeartRate }}</td>
                 <td>{{ object.Sats }}</td>
-                <th class="thupdate"><a class="w3-button w3-small w3-green" href="/{{ object.pk }}/update/sats/">Edit <i class="w3-small fa fa-arrow-right"></i></a></th>
+                <td>{{ object.FiO2 }}</td>
+                <td>{{ object.Litres }}</td>
+                <th class="thupdate"><a class="w3-button w3-green" href="/{{ object.pk }}/update/sats/">Edit <i class="w3-small fa fa-arrow-right"></i></a></th>
             </tr>
             <!-- If object_list is empty  -->
             {% empty %}
@@ -42,6 +46,6 @@
             </tr>
         {% endfor %}
     </table>
-        <a class="w3-button w3-small w3-grey" href="/{{ object.pk }}/create/sats/">Add Sats</a>
+        <a class="w3-button w3-grey" href="/{{ object.pk }}/create/sats/">Add Sats</a>
 </div>
 {% endblock %}
