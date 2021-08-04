@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa661b2e-23bf-42fe-a847-45288d6b8d75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vhwhighflow/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vhwhighflow/TODO.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vhwhighflow/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/vhwhighflow/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vhwhighflow/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vhwhighflow/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/vhwhighflow/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vhwhighflow/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/vhwhighflow/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vhwhighflow/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/vhwhighflow/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vhwhighflow/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/vhwhighflow/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="fa661b2e-23bf-42fe-a847-45288d6b8d75" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628106072148</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update Models&#10;Menu&#10;CSS (Basic)&#10;DatePicker">
+      <created>1628107413283</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1628107413283</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -108,10 +105,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="438" y="410" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1628025614236" />
-    <state x="230" y="88" key="CommitChangelistDialog2" timestamp="1628106071266">
+    <state x="230" y="88" key="CommitChangelistDialog2" timestamp="1628107412331">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="230" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1628106071266" />
+    <state x="230" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1628107412331" />
     <state x="883" y="337" key="FileChooserDialogImpl" timestamp="1628025674428">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -124,10 +121,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="434" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1628026015392" />
-    <state x="221" y="253" key="Vcs.Push.Dialog.v2" timestamp="1628106073913">
+    <state x="221" y="253" key="Vcs.Push.Dialog.v2" timestamp="1628107416410">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="221" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1628106073913" />
+    <state x="221" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1628107416410" />
     <state x="1352" y="0" width="575" height="1047" key="dock-window-1" timestamp="1628088826880">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
