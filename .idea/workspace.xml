@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fa661b2e-23bf-42fe-a847-45288d6b8d75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vhwhighflow/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/vhwhighflow/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,22 +50,37 @@
       <option name="project" value="LOCAL" />
       <updated>1628026083900</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Statics">
+      <created>1628026312392</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1628026312392</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update File Structure">
+      <created>1628026528483</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1628026528483</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Statics" />
-    <option name="LAST_COMMIT_MESSAGE" value="Statics" />
+    <MESSAGE value="Update File Structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update File Structure" />
   </component>
   <component name="WindowStateProjectService">
     <state x="438" y="410" key="#Notifications" timestamp="1628025614236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="438" y="410" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1628025614236" />
-    <state x="230" y="88" key="CommitChangelistDialog2" timestamp="1628026082827">
+    <state x="230" y="88" key="CommitChangelistDialog2" timestamp="1628026527693">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="230" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1628026082827" />
+    <state x="230" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1628026527693" />
     <state x="883" y="337" key="FileChooserDialogImpl" timestamp="1628025674428">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -80,9 +93,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="434" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1628026015392" />
-    <state x="221" y="253" key="Vcs.Push.Dialog.v2" timestamp="1628026112386">
+    <state x="221" y="253" key="Vcs.Push.Dialog.v2" timestamp="1628026530188">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="221" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1628026112386" />
+    <state x="221" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1628026530188" />
   </component>
 </project>
