@@ -44,7 +44,8 @@ class satsCreate(CreateView):
 
 class satsUpdateView(UpdateView):
     model = sats
-    fields = ['Date', 'RespRate','HeartRate','Sats','FiO2','Litres']
+    #fields = ['Date', 'RespRate','HeartRate','Sats','FiO2','Litres']
+    form_class = satsForm
 
     def get_success_url(self):
         return reverse('list', kwargs={'pk': self.object.Patient_id})

@@ -12,8 +12,8 @@ class highflowFormCreate(forms.ModelForm):
         fields = ['FolderNo','Name','Age','Background','PriorityScore',
                   'PriorityScoreDate','HFStart']
         widgets = {
-            'PriorityScoreDate': DatePickerInput(),
-            'HFStart': DatePickerInput(),
+            'PriorityScoreDate': DatePickerInput(format='%d/%m/%Y'),
+            'HFStart': DatePickerInput(format='%d/%m/%Y'),
         }
 
 class highflowFormUpdate(forms.ModelForm):
@@ -35,5 +35,5 @@ class satsForm(forms.ModelForm):
         model = sats
         fields = ['Date', 'RespRate','HeartRate','Sats','FiO2','Litres']
         widgets = {
-            'Date': DateTimePickerInput(format='%d/%m/%Y'),
+            'Date': DateTimePickerInput(format='%d/%m/%Y %H:%M'),
         }

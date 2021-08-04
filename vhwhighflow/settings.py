@@ -153,9 +153,12 @@ USE_TZ = True
 
 #Date formatting
 DATE_INPUT_FORMATS = ['%d/%m/%Y', '%d/%m/%y']
+DATETIME_INPUT_FORMAT = ['%d/%m/%Y %H:%i']
 
 DATE_FORMAT = 'd/m/Y'
-#
+DATETIME_FORMAT = 'd/m/Y H:i'
+
+
 #DATETIME_INPUT_FORMAT = [
 #    '%Y-%m-%d %H:%M:%S',     # '2006-10-25 14:30:59'
 #    '%Y-%m-%d %H:%M:%S.%f',  # '2006-10-25 14:30:59.000200'

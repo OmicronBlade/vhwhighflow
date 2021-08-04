@@ -32,7 +32,7 @@ class highflow(models.Model):
 
 class sats(models.Model):
     Patient = models.ForeignKey(highflow, on_delete=models.CASCADE)
-    Date = models.DateField(null=False)
+    Date = models.DateTimeField(null=False)
     RespRate = models.PositiveIntegerField(null=False, verbose_name='Resp Rate', validators=[MinValueValidator(10),MaxValueValidator(60)])
     HeartRate = models.PositiveIntegerField(null=False, verbose_name='Heart Rate', validators=[MinValueValidator(40),MaxValueValidator(200)])
     Sats = models.PositiveIntegerField(null=False, default=90, validators=[MinValueValidator(40),MaxValueValidator(100)])
