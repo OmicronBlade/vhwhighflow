@@ -11,13 +11,30 @@ PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 SECRET_KEY = '_y#p+#emw$=6ff(3*d1akb)stxn00smzy8qo2r&wu66jx)y)n1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1','.herokuapp.com']
+ALLOWED_HOSTS = ['localhost','127.0.0.1','.herokuapp.com','192.168.0.195']
 
 # Static files (CSS, JavaScript, Images)
 STATIC_ROOT = os.path.join(PROJECT_PATH, 'staticfiles')
 STATIC_URL = '/static/'
+
+import logging
+#LOGGING = {
+#    'version': 1,
+#    'disable_existing_loggers': False,
+#    'handlers': {
+#        'console': {
+#            'class': 'logging.StreamHandler',
+#        },
+#    },
+#    'loggers': {
+#        'django': {
+#            'handlers': ['console'],
+#            'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
+#        },
+#    },
+#}
 
 
 # Application definition

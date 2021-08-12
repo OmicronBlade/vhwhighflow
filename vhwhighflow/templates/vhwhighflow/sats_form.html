@@ -2,7 +2,6 @@
 
 {% block content %}
 {% load bootstrap4 %}
-{% bootstrap_css %}
 {% bootstrap_javascript jquery='full' %}
 {{ form.media }}
 <form method="POST" enctype="multipart/form-data">
@@ -10,10 +9,10 @@
     <!-- Security token -->
     {% csrf_token %}
 
-    <table class="w3-table">
+    <table class="table">
         <!-- Using the formset -->
         {{ form.as_table }}
     </table>
-    <input type="submit" class="w3-button w3-grey w3-left" value="Submit">
+    <input type="submit" class="btn btn-secondary" value="Submit">
 </form>
 {% endblock %}

@@ -1,35 +1,103 @@
+html, table, body {
+  font-size: 14px;
+}
+
+.dashboard {
+  background-color: #292b2c;
+  color: #ffffff;
+}
+
+.errorlist {
+  display: block;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  position: relative;
+  padding-left: -1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+
 .box {
   margin: auto;
-  width: 95%;
-  padding: 10px;
+  width: 97.5%;
+  padding: 2px;
 }
 
 .header {
   position: relative;
   left: 0;
   right: 0;
+  margin: 5px;
   padding: 10px;
   border-bottom: 1px solid #ccc;
-  background-color: #fff; /* Black */
   z-index: 2;
 }
 
-h1 {
-  font-size: 4vw;
+.header a {
+  padding: 4px 4px 4px 4px;
+  text-decoration: none;
+  color: #fff;
 }
 
-.header a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 2vw;
+.header a:hover {
   color: #818181;
 }
 
-.main{
-  position: relative;
-  padding: 0px 10px;
+table a{
+  color: #292b2c;
 }
 
-table {
-  font-size: 2vw;
+table a:hover{
+  color: #818181;
+}
+
+@media (min-width: 576px){
+  html, table {
+    font-size: 13px;
+  }
+  .box {
+    padding: 5px;
+  }
+  .header {
+    margin: 5px;
+  }
+  .header a{
+    padding: 4px 4px 4px 4px;
+  }
+}
+
+@media (min-width: 768px){
+  html, table {
+    font-size: 13px;
+  }
+  .box {
+    width: 95%;
+    padding: 10px;
+  }
+  .header {
+    margin: 0px;
+  }
+  .header a{
+    padding: 6px 8px 6px 8px;
+  }
+}
+
+@media (min-width: 992px){
+  html, table {
+    font-size: 13px;
+  }
+  .box {
+    width: 95%;
+    padding: 15px;
+  }
+  .header {
+    margin: 0px;
+  }
+  .header a{
+    padding: 6px 8px 6px 8px;
+  }
 }

@@ -9,11 +9,11 @@
 
     <!-- Security token -->
     {% csrf_token %}
-    <h1>Patient: {{ highflow.Name }}</h1>
-    <table class="w3-table">
+    <h2 class="font-weight-light">Patient: {{ highflow.Name }}</h2>
+    <table class="table">
         <!-- Using the formset -->
         {{ form.as_table }}
     </table>
-    <input type="submit" class = "w3-button w3-grey" value="Submit">
+    <input type="submit" class="btn btn-secondary" value="Submit">
 </form>
 {% endblock %}

@@ -24,7 +24,7 @@
                 <td>{{ object.PriorityScore }}</td>
                 <td>{{ object.get_days_hfno2 }}</td>
                 <td>{{ object.get_latest_sats.0.Sats }}</td>
-                <td><a class="btn btn-primary btn-sm" href="/list/{{ object.pk }}/">View</a></td>
+                <td><a class="btn btn-primary btn-sm" href="/list/{{ object.pk }}/">View <i class="fa fa-arrow-right"></i></a></td>
             </tr>
             <!-- If object_list is empty  -->
             {% empty %}
@@ -35,9 +35,5 @@
         </tbody>
     </table>
     <a class="btn btn-success" href="/create/">Add Patient</a>
-</div>
-
-<div>
-
 </div>
 {% endblock %}

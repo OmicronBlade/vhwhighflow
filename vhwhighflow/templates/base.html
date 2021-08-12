@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Victoria HighFlow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victoria High Flow</title>
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}"/>
     <link rel="stylesheet" href="{% static 'css/vhwhighflow.css' %}">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
 </head>
-<body>
-  <div class ="box">
-        <div class="header">
-            <a class="w3-hover-blue" href="/">Home <i class="w3-large fa fa-home"></i></a>
-            <a class="w3-hover-blue" href="/list">HFNO2 Patients <i class="w3-large fa fa-bars"></i></a>
+<body class="">
+    <div class ="box">
+        <div class="header bg-dark">
+            <a class="" href="/">Home <i class="fa fa-home"></i></a>
+            <a class="" href="/list">HFNO2 Patients <i class="fa fa-bars"></i></a>
+            <a class="" href="/redlist">Red Patients <i class="fa fa-book"></i></a>
         </div>
-
-        <div class="main">
-            <div class="contain">
-                {% block content %}
-                {% endblock %}
-            </div>
+        <div class="box">
+            {% block content %}
+            {% endblock %}
         </div>
     </div>
 </body>

@@ -9,7 +9,7 @@
                 <td>Name</td>
                 <td>Age</td>
                 <td>Priority</td>
-                <td>Days HFNO2</td>
+                <td>Admission</td>
                 <td>Sats</td>
                 <td></td>
             </tr>
@@ -22,7 +22,7 @@
                 <td>{{ object.Name }}</td>
                 <td>{{ object.Age }}</td>
                 <td>{{ object.PriorityScore }}</td>
-                <td>{{ object.get_days_hfno2 }}</td>
+                <td>{{ object.AdmissionDate }}</td>
                 <td>{{ object.get_latest_sats.0.Sats }}</td>
                 <td><a class="btn btn-primary btn-sm" href="/list/{{ object.pk }}/">View</a></td>
             </tr>
@@ -35,9 +35,5 @@
         </tbody>
     </table>
     <a class="btn btn-success" href="/create/">Add Patient</a>
-</div>
-
-<div>
-
 </div>
 {% endblock %}

@@ -1,9 +1,25 @@
 from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
+from django.db.models import Q
 from django.urls import reverse
 from .models import *
 from .forms import highflowFormCreate, highflowFormUpdate, satsForm
+
+class highflowDashboard(ListView):
+    model = highflow
+    template_name = 'vhwhighflow/highflow_dashboard.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        queryset = highflow.objects.filter(Archive=False)
+        context['on_highflow'] = queryset.filter(~Q(HFStart=None)).count()
+        context['reds'] = queryset.filter(HFStart=None).count()
+        return context
+
+
+    #queryset = highflow.objects.filter(Archive=False).filter(~Q(HFStart=None))
+    #print(highflow.objects.filter(Archive=False).filter(~Q(HFStart=None)))
 
 class highflowCreate(CreateView):
     model = highflow
@@ -18,7 +34,19 @@ class highflowInidividual(DetailView):
 class highflowList (ListView):
     model = highflow
     fields = ['Name','Age','PriorityScore','UpdatedPriority','HFStart']
-    queryset = highflow.objects.filter(Archive=False)
+    queryset = highflow.objects.filter(Archive=False).filter(~Q(HFStart=None))
+    ordering = ['HFStart']
+
+class highflowRedList (ListView):
+    model = highflow
+    template_name = 'vhwhighflow/red_list.html'
+    fields = ['Name','Age','PriorityScore','UpdatedPriority','AdmissionDate']
+    queryset = highflow.objects.filter(HFStart=None)
+    ordering = ['AdmissionDate']
+
+class highflowListAll (ListView):
+    model = highflow
+    fields = ['Name','Age','PriorityScore','UpdatedPriority','HFStart']
     ordering = ['HFStart']
 
 class highflowUpdateView(UpdateView):

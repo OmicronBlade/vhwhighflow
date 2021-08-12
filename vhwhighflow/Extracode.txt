@@ -8,3 +8,52 @@
         </tr>
 
     <link rel="stylesheet" href="{% static 'css/highflow.css' %}">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+        <tr><td>Folder No:</td><td>{{ highflow.FolderNo }}</td></tr>
+        <tr><td>Age:</td><td>{{ highflow.Age }}</td></tr>
+        <tr><td>Priority:</td><td>{{ highflow.PriorityScore }}</td><td>Date:</td><td>{{ highflow.PriorityScoreDate }}</td></tr>
+        <tr><td>Updated Priority:</td><td>{{ highflow.UpdatedPriority }}</td><td>Date:</td><td>{{ highflow.UpdatedPriorityDate }}</td></tr>
+        <tr><td>High Flow Start:</td><td>{{ highflow.HFStart }}</td></tr>
+        <tr><td>Background:</td><td colspan="3">{{ highflow.Background|wordwrap:50|linebreaks }}</td></tr>
+
+        <tr><td class="">Folder No:</td><td>{{ highflow.FolderNo }}</td></tr>
+
+
+.box {
+  margin: auto;
+  width: 95%;
+  padding: 10px;
+}
+
+.header {
+  position: relative;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff; /* Black */
+  z-index: 2;
+}
+
+h1 {
+  font-size: 4vw;
+}
+
+.header a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 2vw;
+  color: #818181;
+}
+
+.main{
+  position: relative;
+  padding: 0px 10px;
+}
+
+table {
+  font-size: 2vw;
+}

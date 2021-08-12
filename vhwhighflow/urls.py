@@ -4,8 +4,10 @@ from .views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', highflowList.as_view()),
+    path('', highflowDashboard.as_view()),
+    path('redlist/', highflowRedList.as_view()),
     path('list/', highflowList.as_view()),
+    path('list_all/', highflowListAll.as_view()),
     path('list/<pk>/', highflowInidividual.as_view(), name='list'),
     path('create/', highflowCreate.as_view()),
     path('update/<pk>/', highflowUpdateView.as_view()),

@@ -9,23 +9,27 @@ class highflowFormCreate(forms.ModelForm):
     #highflow = forms.FileField()
     class Meta:
         model = highflow
-        fields = ['FolderNo','Name','Age','Background','PriorityScore',
+        fields = ['FolderNo','Name','Age','AdmissionDate','Background','PriorityScore',
                   'PriorityScoreDate','HFStart']
         widgets = {
+            'AdmissionDate': DatePickerInput(format='%d/%m/%Y'),
             'PriorityScoreDate': DatePickerInput(format='%d/%m/%Y'),
             'HFStart': DatePickerInput(format='%d/%m/%Y'),
+            'Background': forms.Textarea(attrs={'rows': 5, 'cols': 25})
         }
 
 class highflowFormUpdate(forms.ModelForm):
     #highflow = forms.FileField()
     class Meta:
         model = highflow
-        fields = ['FolderNo', 'Name', 'Age', 'Background', 'PriorityScore',
+        fields = ['FolderNo', 'Name', 'Age', 'Background', 'PriorityScore', 'AdmissionDate',
                   'PriorityScoreDate', 'UpdatedPriority', 'UpdatedPriorityDate', 'HFStart', 'Archive']
         widgets = {
+            'AdmissionDate': DatePickerInput(format='%d/%m/%Y'),
             'PriorityScoreDate': DatePickerInput(format='%d/%m/%Y'),
             'UpdatedPriorityDate': DatePickerInput(format='%d/%m/%Y'),
             'HFStart': DatePickerInput(format='%d/%m/%Y'),
+            'Background': forms.Textarea(attrs={'rows': 5, 'cols': 25})
         }
 
 class satsForm(forms.ModelForm):
