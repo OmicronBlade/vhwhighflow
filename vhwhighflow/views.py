@@ -26,7 +26,7 @@ class highflowCreate(CreateView):
     #fields = ['FolderNo','Name','Age','Background','PriorityScore',
     #          'PriorityScoreDate','HFStart']
     form_class = highflowFormCreate
-    success_url = '/'
+    success_url = 'list'
 
 class highflowInidividual(DetailView):
     model = highflow
