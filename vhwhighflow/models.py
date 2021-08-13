@@ -3,10 +3,21 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from datetime import date
 
 class highflow(models.Model):
+    WARDS = [
+        ('C1', 'C1'),
+        ('C2', 'C2'),
+        ('SSU', 'Short Stay Unit'),
+        ('HCU', 'High Care Unit'),
+        ('SMM', 'SMM'),
+        ('SMF', 'SMF'),
+        ('EC', 'Emergency Centre')
+    ]
+
     FolderNo = models.PositiveIntegerField(primary_key=True, null=False, unique=True, verbose_name='Folder No')
     Name = models.CharField(null=False, max_length=50)
     Age = models.PositiveIntegerField(null=False, validators=[MinValueValidator(10),MaxValueValidator(75)])
     AdmissionDate = models.DateField(null=False, verbose_name='Admission Date')
+    Ward = models.CharField(blank=True, max_length=3, choices=WARDS)
     Background = models.TextField(blank=True, max_length=255)
     PriorityScore = models.PositiveIntegerField(null=False, default=1, verbose_name='Priority Score')
     PriorityScoreDate = models.DateField(null=False, verbose_name='Priority Score Date')
@@ -27,11 +38,14 @@ class highflow(models.Model):
         else:
             return (date.today() - self.HFStart).days
 
-    def get_latest_sats(self):
+    def get_latest_vitals(self):
+        return self.sats_set.all().order_by('-Date')
+
+    def get_latest_oxygen(self):
         return self.sats_set.all().order_by('-Date')
 
     def __str__(self):
-        return self.Name+" "+self.FolderNo
+        return self.Name+" "+str(self.FolderNo)
 
 class sats(models.Model):
     Patient = models.ForeignKey(highflow, on_delete=models.CASCADE)
@@ -40,7 +54,7 @@ class sats(models.Model):
     HeartRate = models.PositiveIntegerField(null=False, verbose_name='Heart Rate', validators=[MinValueValidator(40),MaxValueValidator(200)])
     Sats = models.PositiveIntegerField(null=False, default=90, validators=[MinValueValidator(40),MaxValueValidator(100)])
     FiO2 = models.PositiveIntegerField(null=False, default=40, validators=[MinValueValidator(21),MaxValueValidator(100)])
-    Litres = models.PositiveIntegerField(null=False, default=50, validators=[MinValueValidator(25),MaxValueValidator(60)])
+    Litres = models.PositiveIntegerField(null=False, default=50, validators=[MinValueValidator(1),MaxValueValidator(60)])
 
 #    def __str__(self):
 #        return self.patient+" "+self.date+" "+self.sats

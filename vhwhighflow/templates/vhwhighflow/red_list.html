@@ -2,16 +2,15 @@
 
 {% block content %}
 <div>
-    <h3 class="font-weight-light pt-3 pb-3">Current High Flow Patients</h3>
+    <h3 class="font-weight-light pt-3 pb-3">Current Red Patients</h3>
     <table class="table table-hover">
         <thead class="">
             <tr>
                 <td>Name</td>
                 <td>Age</td>
-                <td>Priority</td>
                 <td>Admission</td>
-                <td>Sats</td>
-                <td></td>
+                <td>Priority</td>
+                <td>Vitals</td>
             </tr>
         </thead>
         <tbody class="">
@@ -19,12 +18,11 @@
             {% for object in object_list %}
             <!-- Display Objects -->
             <tr class="">
-                <td>{{ object.Name }}</td>
+                <td><a class="" href="/list/{{ object.pk }}/">{{ object.Name }}<br>({{ object.Ward }})</a></td>
                 <td>{{ object.Age }}</td>
-                <td>{{ object.PriorityScore }}</td>
                 <td>{{ object.AdmissionDate }}</td>
-                <td>{{ object.get_latest_sats.0.Sats }}</td>
-                <td><a class="btn btn-primary btn-sm" href="/list/{{ object.pk }}/">View</a></td>
+                <td>{{ object.PriorityScore }}</td>
+                <td style="white-space:nowrap;" class="subtle">RR: {{ object.get_latest_vitals.0.RespRate }}<br>HR: {{ object.get_latest_vitals.0.HeartRate }}<br>FiO: {{ object.get_latest_vitals.0.FiO2 }}%<br>Sats: {{ object.get_latest_vitals.0.Sats }}%</td>
             </tr>
             <!-- If object_list is empty  -->
             {% empty %}

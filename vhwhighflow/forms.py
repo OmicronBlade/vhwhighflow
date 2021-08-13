@@ -9,7 +9,7 @@ class highflowFormCreate(forms.ModelForm):
     #highflow = forms.FileField()
     class Meta:
         model = highflow
-        fields = ['FolderNo','Name','Age','AdmissionDate','Background','PriorityScore',
+        fields = ['FolderNo','Name','Age','Ward','AdmissionDate','Background','PriorityScore',
                   'PriorityScoreDate','HFStart']
         widgets = {
             'AdmissionDate': DatePickerInput(format='%d/%m/%Y'),
@@ -22,7 +22,7 @@ class highflowFormUpdate(forms.ModelForm):
     #highflow = forms.FileField()
     class Meta:
         model = highflow
-        fields = ['FolderNo', 'Name', 'Age', 'Background', 'PriorityScore', 'AdmissionDate',
+        fields = ['FolderNo', 'Name', 'Age', 'Ward', 'Background', 'PriorityScore', 'AdmissionDate',
                   'PriorityScoreDate', 'UpdatedPriority', 'UpdatedPriorityDate', 'HFStart', 'Archive']
         widgets = {
             'AdmissionDate': DatePickerInput(format='%d/%m/%Y'),

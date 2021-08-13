@@ -7,23 +7,24 @@
         <thead class="">
             <tr>
                 <td>Name</td>
-                <td>Ward</td>
                 <td>Age</td>
                 <td>Score</td>
                 <td>Days</td>
+                <td>Vitals</td>
             </tr>
         </thead>
         <tbody class="">
-             <!-- Iterate over object_list -->
+            <!-- Iterate over object_list -->
             {% for object in object_list %}
             <!-- Display Objects -->
             <tr class="">
-                <td><a class="" href="/list/{{ object.pk }}/">{{ object.Name|wordwrap:10 }}</a></td>
-                <td>{{ object.Ward }}</td>
+                <td><a class="" href="/list/{{ object.pk }}/">{{ object.Name|wordwrap:10 }}<br>({{ object.Ward }})</a></td>
                 <td>{{ object.Age }}</td>
                 <td>{{ object.PriorityScore }}</td>
                 <td>{{ object.get_days_hfno2 }}</td>
+                <td style="white-space:nowrap;" class="subtle">RR: {{ object.get_latest_vitals.0.RespRate }}<br>HR: {{ object.get_latest_vitals.0.HeartRate }}<br>FiO: {{ object.get_latest_vitals.0.FiO2 }}%<br>Sats: {{ object.get_latest_vitals.0.Sats }}%</td>
             </tr>
+
             <!-- If object_list is empty  -->
             {% empty %}
             <tr>

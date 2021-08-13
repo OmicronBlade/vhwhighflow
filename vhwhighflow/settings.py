@@ -11,7 +11,7 @@ PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 SECRET_KEY = '_y#p+#emw$=6ff(3*d1akb)stxn00smzy8qo2r&wu66jx)y)n1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost','127.0.0.1','.herokuapp.com','192.168.0.195']
 
@@ -63,6 +63,9 @@ MIDDLEWARE = [
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+#SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+#SECURE_SSL_REDIRECT = True
 
 ROOT_URLCONF = 'vhwhighflow.urls'
 
@@ -170,7 +173,7 @@ USE_TZ = True
 
 #Date formatting
 DATE_INPUT_FORMATS = ['%d/%m/%Y', '%d/%m/%y']
-DATETIME_INPUT_FORMAT = ['%d/%m/%Y %H:%i']
+DATETIME_INPUT_FORMATS = ['%d/%m/%Y %H:%M']
 
 DATE_FORMAT = 'd/m/Y'
 DATETIME_FORMAT = 'd/m/Y H:i'

@@ -5,6 +5,7 @@
 <div style="overflow-x:auto;">
     <table class="table table-hover">
         <tr><td>Age:</td><td>{{ highflow.Age }}</td></tr>
+        <tr><td>Ward:</td><td>{{ highflow.Ward }}</td></tr>
         <tr><td>Admission Date:</td><td>{{ highflow.AdmissionDate }}</td></tr>
         <tr><td>Priority: ({{ highflow.PriorityScoreDate }})</td><td>{{ highflow.PriorityScore }}</td></tr>
         <tr><td>Updated Priority: ({{ highflow.UpdatedPriorityDate }})</td><td>{{ highflow.UpdatedPriority }}</td></tr>
@@ -13,6 +14,10 @@
     </table>
 
     <a class="btn btn-secondary" href="/update/{{ highflow.pk }}/">Update Details <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-warning" href="/archive/{{ highflow.pk }}/">Archive <i class="fa fa-arrow-right"></i></a>
+    {% if highflow.Archive %}
+        <a class="btn btn-warning" href="/unarchive/{{ highflow.pk }}/">Unarchive <i class="fa fa-arrow-right"></i></a>
+    {% endif %}
     <br>
     <br>
     <br>

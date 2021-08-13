@@ -55,6 +55,10 @@ table a:hover{
   color: #818181;
 }
 
+.subtle{
+  color: #818181;
+}
+
 @media (min-width: 576px){
   html, table {
     font-size: 13px;

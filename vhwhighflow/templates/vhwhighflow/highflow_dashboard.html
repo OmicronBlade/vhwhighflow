@@ -3,9 +3,25 @@
 {% block content %}
 <div >
     <h2 class="pt-3 pb-3">Dashboard</h2>
-    <h4>Number of Patients on High Flow: {{ on_highflow }}</h4>
-    <h4>Number of Red Triaged Patients: {{ reds }}</h4>
-    <br>
-    <h6>This Dashboard section still to be updated to display further stats.</h6>
+    <table class="table">
+        <tr>
+            <td class="w-25"><b>High Flow:</b></td>
+            <td>{{ on_highflow }}</td>
+        </tr>
+        <tr>
+            <td><b>Red Triaged:</b></td>
+            <td>{{ reds }}</td>
+        </tr>
+        <tr><td></td><td></td></tr>
+        <tr>
+            <td><b>Oxygen Usage:</b></td>
+            <td>{{ oxygen }} Litres/min</td>
+        </tr>
+        <tr>
+            <td><b>Average Days High Flow:</b></td>
+            <td>{{ average_days|floatformat:1 }} Days</td>
+        </tr>
+    </table>
+    <p>Please send requests as to what information you would like displayed on the dashboard.</p>
 </div>
 {% endblock %}
