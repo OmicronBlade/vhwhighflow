@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa661b2e-23bf-42fe-a847-45288d6b8d75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vhwhighflow/templates/vhwhighflow/highflow_list_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vhwhighflow/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/vhwhighflow/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vhwhighflow/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/vhwhighflow/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vhwhighflow/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/vhwhighflow/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vhwhighflow/static/css/vhwhighflow.css" beforeDir="false" afterPath="$PROJECT_DIR$/vhwhighflow/static/css/vhwhighflow.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vhwhighflow/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/vhwhighflow/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vhwhighflow/templates/vhwhighflow/all_patients.html" beforeDir="false" afterPath="$PROJECT_DIR$/vhwhighflow/templates/vhwhighflow/all_patients.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vhwhighflow/templates/vhwhighflow/highflow_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/vhwhighflow/templates/vhwhighflow/highflow_dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vhwhighflow/templates/vhwhighflow/highflow_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/vhwhighflow/templates/vhwhighflow/highflow_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vhwhighflow/templates/vhwhighflow/highflow_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/vhwhighflow/templates/vhwhighflow/highflow_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vhwhighflow/templates/vhwhighflow/red_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/vhwhighflow/templates/vhwhighflow/red_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vhwhighflow/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/vhwhighflow/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vhwhighflow/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/vhwhighflow/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +19,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="MJ" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1wEYCEnUn1irdMlzMS6TId88Pei" />
@@ -135,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628800350149</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added Ward&#10;Updated Layout with Highflow List, Detail and Dashboard&#10;Added Archive Button">
+      <created>1628880503902</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1628880503902</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -145,17 +146,18 @@
     <MESSAGE value="Update Models&#10;Menu&#10;CSS (Basic)&#10;DatePicker" />
     <MESSAGE value="CSS Update&#10;Formatting" />
     <MESSAGE value="Small Fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small Fixes" />
+    <MESSAGE value="Added Ward&#10;Updated Layout with Highflow List, Detail and Dashboard&#10;Added Archive Button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Ward&#10;Updated Layout with Highflow List, Detail and Dashboard&#10;Added Archive Button" />
   </component>
   <component name="WindowStateProjectService">
     <state x="438" y="410" key="#Notifications" timestamp="1628025614236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="438" y="410" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1628025614236" />
-    <state x="230" y="88" key="CommitChangelistDialog2" timestamp="1628800349308">
+    <state x="230" y="88" key="CommitChangelistDialog2" timestamp="1628880502605">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="230" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1628800349308" />
+    <state x="230" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1628880502605" />
     <state x="883" y="337" key="FileChooserDialogImpl" timestamp="1628025674428">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -176,10 +178,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="230" y="285" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1628799634349" />
-    <state x="221" y="253" key="Vcs.Push.Dialog.v2" timestamp="1628800352282">
+    <state x="221" y="253" key="Vcs.Push.Dialog.v2" timestamp="1628880506082">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="221" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1628800352282" />
+    <state x="221" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1628880506082" />
     <state x="1352" y="0" width="575" height="1047" key="dock-window-1" timestamp="1628088826880">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

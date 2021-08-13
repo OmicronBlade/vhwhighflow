@@ -28,7 +28,10 @@ class highflowDashboard(ListView):
                 average_days = average_days + patient.get_days_hfno2()
         context['oxygen'] = oxygen
         context['on_highflow'] = queryset.filter(~Q(HFStart=None)).count()
-        context['average_days'] = average_days/context['on_highflow']
+        if context['on_highflow'] == 0:
+            context['average_days'] = 0
+        else:
+            context['average_days'] = average_days/context['on_highflow']
         context['reds'] = queryset.filter(HFStart=None).count()
         return context
 
