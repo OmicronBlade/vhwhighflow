@@ -62,7 +62,7 @@ class highflowRedList (ListView):
     model = highflow
     template_name = 'vhwhighflow/red_list.html'
     fields = ['Name','Age','PriorityScore','UpdatedPriority','AdmissionDate']
-    queryset = highflow.objects.filter(HFStart=None)
+    queryset = highflow.objects.filter(Archive=False).filter(HFStart=None)
     ordering = ['AdmissionDate']
 
 class highflowListAll (ListView):
